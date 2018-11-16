@@ -1,0 +1,22 @@
+.text-over {
+  white-space: pre-wrap;
+}
+
+.text-wrap {
+  position: relative;
+  line-height:1.5em;
+  max-height: 6em;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  word-break: break-all;
+}
+
+.full-text__btn {
+  font-weight: normal;
+  color: #1496F1
+}

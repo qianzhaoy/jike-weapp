@@ -1,0 +1,25 @@
+.jk-card {
+  padding: 30px;
+  box-sizing: border-box;
+  border-bottom: 1Px solid #eee;
+
+  &__heart {
+    text-align: right;
+  }
+
+  &__name {
+    font-weight: bolder;
+  }
+
+  &__desc {
+    font-size: 24px;
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__content {
+    white-space: pre;
+  }
+}
