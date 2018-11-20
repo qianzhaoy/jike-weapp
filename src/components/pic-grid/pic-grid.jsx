@@ -14,10 +14,10 @@ export default class PicGrid extends Component {
 
   render() {
     const imgs = this.props.imgs.map((el, i, origin) => {
-      const defaultClassName = origin.length === 1 ? 'single-pic' : 'col-4-gutter';
+      const defaultClassName = origin.length === 1 ? 'single-pic pic-item' : 'col-4-gutter pic-item';
       return (
-        <View key={el} className={defaultClassName}>
-          <Image className='pic-item' mode='aspectFill' src={el}></Image>
+        <View key={el} className={defaultClassName} style={{backgroundImage: 'url(' + el + ')'}}>
+          {/* <Image className='pic-item' mode='aspectFill' src={el}></Image>  */}
         </View>
       )
     })

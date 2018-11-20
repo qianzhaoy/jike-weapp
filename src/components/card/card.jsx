@@ -22,8 +22,8 @@ export default class JkCard extends Component {
             </View>
             <View className='at-col at-col-8'>
               <View>
-                <View className='jk-card__name'>{this.props.name || '&nbsp;'}</View>
-                <View className='jk-card__desc' decode>{this.props.desc || '&nbsp;'}</View>
+                <View className='jk-card__name'>{this.props.name}</View>
+                <View className='jk-card__desc' decode>{this.props.desc}</View>
               </View>
             </View>
             <View className='at-col at-col-2 jk-card__heart'>
@@ -36,6 +36,12 @@ export default class JkCard extends Component {
       </View>
     )
   }
+}
+
+JkCard.defaultProps = {
+  thumb: '',
+  name: '',
+  desc: ''
 }
 
 JkCard.propTypes = {

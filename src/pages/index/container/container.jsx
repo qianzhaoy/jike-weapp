@@ -27,7 +27,7 @@ export default class Container extends Component {
     }
     this.activeHandle = this.activeHandle.bind(this)
   }
-  
+
   componentWillMount() {
     events.on(`onActive:${this.props.tabName}`, this.activeHandle)
   }
@@ -49,10 +49,10 @@ export default class Container extends Component {
       const desc = isAttention ? getTimeInterval(+new Date(el.createdAt)) : el.user.bio
       const pics = el.pictures.map(pic => pic.thumbnailUrl)
       return (
-        <JkCard 
+        <JkCard
           key={el.id}
           name={el.user.screenName}
-          desc={desc}
+          desc={null}
           thumb={el.user.avatarImage.thumbnailUrl}
         >
           <TextOver root-class='mt20' content={el.content}></TextOver>

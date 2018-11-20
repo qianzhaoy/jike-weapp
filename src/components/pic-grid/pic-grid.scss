@@ -1,17 +1,18 @@
 .pic-item {
-  width: 100%;
-  max-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .col-4-gutter {
   flex: 0 0 32.5%;
   width: 32.5%;
-  height: 200rpx;
+  padding-bottom: 32.5%;
+  background-size: cover;
 }
 
 .single-pic {
   flex: 0 0 70%;
   width: 70%;
-  height: auto;
-  max-height: 800px;
+  padding-bottom: 50%;
+  background-size: 100%;
 }
