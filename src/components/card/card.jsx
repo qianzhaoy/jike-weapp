@@ -27,7 +27,7 @@ export default class JkCard extends Component {
               </View>
             </View>
             <View className='at-col at-col-2 jk-card__heart'>
-              <AtIcon value='heart' size={16} color='#999'></AtIcon>
+              <AtIcon prefixClass='jike' value='star' size={16} color='#999'></AtIcon>
             </View>
         </View>
         <View className='jk-card__content'>

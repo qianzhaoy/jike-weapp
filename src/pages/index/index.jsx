@@ -30,7 +30,7 @@ export default class Index extends Component {
 
   componentDidMount() {
     event.trigger('onActive:attention')
-  } 
+  }
 
   handleClick(current) {
     this.setState({ current }, () => {

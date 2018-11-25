@@ -1,12 +1,14 @@
 import Taro, { Component } from '@tarojs/taro'
 import PropTypes from 'prop-types'
 import { View } from '@tarojs/components'
+import { AtTag } from 'taro-ui'
 
 import InitLoadingWrapper from '../../../wrappers/container-loading/container-loading'
 import JkCard from '../../../components/card/card'
 import JkRepostCard from '../../../components/repost-card/repost-card'
 import TextOver from '../../../components/text-over/text-over'
 import PicGrid from '../../../components/pic-grid/pic-grid'
+import CardFooter from '../../../components/card-footer/card-footer'
 
 import events from '../event'
 import data from '../../../mock/mock'
@@ -48,16 +50,19 @@ export default class Container extends Component {
       const isAttention = tabName === 'attention'
       const desc = isAttention ? getTimeInterval(+new Date(el.createdAt)) : el.user.bio
       const pics = el.pictures.map(pic => pic.thumbnailUrl)
+
       return (
         <JkCard
           key={el.id}
           name={el.user.screenName}
-          desc={null}
+          desc={desc}
           thumb={el.user.avatarImage.thumbnailUrl}
         >
           <TextOver root-class='mt20' content={el.content}></TextOver>
           {el.type === REPOST && <JkRepostCard root-class='mt20' topic={el.target.topic.content} thumb={el.target.topic.squarePicture.thumbnailUrl} content={el.target.content}></JkRepostCard>}
           {el.type === ORIGINAL_POST && <PicGrid root-class='mt20' imgs={pics}></PicGrid>}
+          {el.topic.content && <AtTag className='mt20' size='small' circle active># {el.topic.content}</AtTag>}
+          <CardFooter commentCount={el.commentCount} likeCount={el.likeCount} root-class='mt20'></CardFooter>
         </JkCard>
       )
     })

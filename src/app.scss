@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('https://at.alicdn.com/t/font_934604_tqmrkvsj5o.eot');
+  src: url('https://at.alicdn.com/t/font_934604_tqmrkvsj5o.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_934604_tqmrkvsj5o.ttf') format('truetype');
+}
+
+.jike {
+  display: inline-block;
+  font: normal normal normal 14px/1 iconfont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.jike-zan:before { content: "\e677"; }
+
+.jike-zan-full:before { content: "\e656"; }
+
+.jike-star:before { content: "\e672"; }
+
+.jike-fenxiang:before { content: "\e667"; }
+
+.jike-star-full:before { content: "\f0d4"; }
+
+.jike-pinglun:before { content: "\e600"; }
+
+
+.va-middle {
+  vertical-align: middle;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
